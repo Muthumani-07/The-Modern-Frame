@@ -1,0 +1,222 @@
+/* ========================
+   Global Reset & Base Styles
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ========================
+   Header & Navigation
+======================== */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* ========================
+   Hero Section & Badge
+======================== */
+.hero {
+  background: url('../images/artwork1.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: gold;
+  color: black;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* ========================
+   Main Content
+======================== */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* ========================
+   Gallery Page
+======================== */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-gallery figure {
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.grid-gallery figure:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ========================
+   About Page Image Float
+======================== */
+.float-text img {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 300px;
+}
+
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+ul li::before {
+  content: '🎨';
+  margin-right: 8px;
+}
+
+/* ========================
+   Contact Page Table
+======================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+/* ========================
+   Banner Animation
+======================== */
+.banner {
+  background-color: crimson;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  margin: 30px 0;
+  animation: blink 3s infinite;
+  border-radius: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ========================
+   Media Styling (iframe/video)
+======================== */
+iframe, video {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: 3px solid #333;
+  border-radius: 8px;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 14px;
+}
